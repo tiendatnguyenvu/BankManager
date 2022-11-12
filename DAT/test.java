@@ -36,6 +36,7 @@ public class test {
             b.close();
             f.close();
         } catch (Exception e) {
+            
         }
     }
 

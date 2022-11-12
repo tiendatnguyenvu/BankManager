@@ -14,21 +14,24 @@ public class Client {
      private String idcard;
      
      // constructors
-     public Client(String idcard ,String fullname, String birthday, String residence, String phonenumber, String email) {
-          setfullname(fullname);
-          setBirthday(birthday);
-          setaddress(residence);
-          this.phonenumber = phonenumber;
-          this.email = email;
-          this.idcard = idcard;
-     }
-
      public Client() {
           phonenumber = "";
           email = "";
           idcard = "";
           fullname = new FullName();
           residence = new Address();
+     }
+
+     public Client(String idcard ,String fullname, String birthday, String residence, String phonenumber, String email)  {
+          this.fullname = new FullName();
+          this.residence = new Address();
+          
+          setfullname(fullname);
+          setBirthday(birthday);
+          setaddress(residence);
+          this.phonenumber = phonenumber;
+          this.email = email;
+          this.idcard = idcard;
      }
 
      // getter and setter
